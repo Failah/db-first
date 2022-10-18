@@ -1,2 +1,31 @@
 Modellizzare la struttura di una tabella per memorizzare tutti i dati riguardanti delle auto usate messe in vendita da un concessionario
 
+
+AUTO usate
+
+- ID : intero - MEDIUMINT - PRIMARY-KEY AUTO_INCREMENT UNIQUE NOTNULL
+- Marca : stringa - VARCHAR(50) - NOTNULL
+- Modello : stringa - VARCHAR(50) - NOTNULL
+- Tipologia : stringa - VARCHAR(30) 
+- Alimentazione : stringa - VARCHAR(20) - NOTNULL
+- Anno : data - YEAR - NOTNULL
+- KM percorsi : intero - SMALLINT - NOTNULL
+- Revisionata : stringa - VARCHAR(2) - NOTNULL
+- Prezzo : stringa - VARCHAR(20) - NOTNULL
+- Numero di proprietari precedenti : intero - TINYINT 
+- Informazioni integrative : stringa - MEDIUMTEXT 
+
+
+
+Commenti:
+
+Per marca e modello ho inserito un vaore max più alto per questioni di future proof.
+La tipologia è sempre descritta da una o due parole che non prevedo cambino in futuro (berlina, cabrio, sport, ecc...)
+In entrambi i casi ho dato un max più alto del necessario per prevedere casi di doppia classificazione (sport/cabrio per esempio)
+
+Alimentazione: stesso discorso della tipologia (esistono le ibride)
+
+La revisione può essere espressa con una variabile booleana che ritorni 0 per NO e 1 per SI, quindi potrei usare anche un TINYINT
+
+Le Informazioni aggiuntive raccolgo quei dati che solitamente sono specifici per ogni elemento, come (nel caso specifico) se ha dei danni in una parte della carrozzeria, o magari dall'interno. Se hai delle 
+modifiche alla trasmissione, se i sedili sono stati sostituiti, eccetera.
