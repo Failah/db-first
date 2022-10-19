@@ -7,7 +7,10 @@ AUTO usate
 - Marca : stringa - VARCHAR(50) - NOTNULL
 - Modello : stringa - VARCHAR(50) - NOTNULL
 - Tipologia : stringa - VARCHAR(30) 
+- Colore: stringa - VARCHAR(30) - NOTNULL
 - Alimentazione : stringa - VARCHAR(20) - NOTNULL
+- Cilindrata : intero - SMALLINT
+- Cambio automatico : VARCHAR(2) 
 - Anno : data - YEAR - NOTNULL
 - KM percorsi : intero - SMALLINT - NOTNULL
 - Revisionata : stringa - VARCHAR(2) - NOTNULL
